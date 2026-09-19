@@ -1,34 +1,45 @@
 # Indian Art Atlas
 
-An interactive digital map for the Indian Art assignment.
+## Interactive Art Map
+
+This project presents an interactive digital map highlighting important
+locations associated with Indian art history and traditional art forms.
+
+Users can select numbered locations on the map to explore information
+about the artistic traditions, historical background, characteristics,
+and representative themes associated with each region.
 
 ## Features
 
-- Numbered map markers from 1–10
-- Click a marker to show detailed information below the map
-- Click a location in the left-hand list to zoom to it
-- Responsive layout for laptop and mobile
-- Leaflet + OpenStreetMap
-- No backend or database
-- Ready for GitHub Pages
+- Interactive map of India
+- Numbered locations from 1 to 10
+- Information displayed when a location is selected
+- Regional art traditions and historical context
+- Responsive design for different screen sizes
+- Interactive location list for easier navigation
 
-## How to deploy on GitHub Pages
+## Art Traditions Covered
 
-1. Create a new GitHub repository, for example `indian-art-atlas`.
-2. Upload `index.html`, `style.css`, `script.js`, and this README.
-3. Open the repository's **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select `main` and `/ (root)`, then save.
-6. After GitHub finishes publishing, your URL will normally be:
+1. Ajanta – Buddhist mural painting
+2. Ellora – Rock-cut art and sculpture
+3. Mithila – Madhubani painting
+4. Raghurajpur – Pattachitra
+5. Srikalahasti – Kalamkari
+6. Thanjavur – Tanjore painting
+7. Warli Region – Warli painting
+8. Mewar / Udaipur – Rajasthani miniature painting
+9. Gond Region – Gond painting
+10. Delhi – Mughal miniature painting
 
-   `https://YOUR-GITHUB-USERNAME.github.io/indian-art-atlas/`
+## Technologies Used
 
-No npm, Node.js or build step is required.
+- HTML
+- CSS
+- JavaScript
+- Leaflet.js
+- OpenStreetMap
 
-## Academic note
+## Purpose
 
-The location descriptions are concise educational summaries intended for an interactive assignment. The site lists selected reference institutions/resources in the footer section.
-
-## Map attribution
-
-Map tiles are provided by OpenStreetMap and displayed using Leaflet.
+The project was created as an interactive way to explore the
+geographical spread and diversity of Indian art traditions.
