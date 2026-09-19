@@ -1,116 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Indian Art Atlas | Interactive Art Map</title>
-  <meta name="description" content="An interactive digital map exploring important locations and traditions in Indian art history." />
-  <link rel="preconnect" href="https://unpkg.com">
-  <link rel="preconnect" href="https://tile.openstreetmap.org">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIINfQ3D8aVf1F7W5hJmQ3p8rY9K5H3b2s="
-        crossorigin=""/>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Art Atlas</title>
+<meta name="description" content="Interactive digital map exploring important locations in Indian art history.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">INDIAN ART • DIGITAL HUMANITIES</div>
-      <h1>Indian Art Atlas</h1>
-      <p class="subtitle">Explore the geographic spread of India's artistic traditions through key places, movements and artworks.</p>
-      <div class="hero-stats">
-        <span><strong>10</strong> locations</span>
-        <span><strong>8+</strong> art traditions</span>
-        <span><strong>Interactive</strong> map</span>
+<header class="hero">
+  <nav class="topbar"><div class="brand">INDIAN ART ATLAS</div><div class="nav-note">INTERACTIVE ART MAP · 10 LOCATIONS</div></nav>
+  <div class="hero-inner">
+    <div class="eyebrow">A VISUAL JOURNEY THROUGH INDIA</div>
+    <h1>Art lives in<br><em>place.</em></h1>
+    <p>Explore the regions, traditions and visual languages that have shaped Indian art history.</p>
+    <a href="#atlas" class="explore-btn">Explore the atlas <span>↓</span></a>
+  </div>
+  <div class="hero-art">अ · कला · आ · कला · चित्र · रंग</div>
+</header>
+
+<main id="atlas" class="page">
+  <section class="intro">
+    <div><div class="eyebrow dark">THE ATLAS</div><h2>Ten places, many artistic worlds.</h2></div>
+    <p>Each numbered point represents a place connected to an important Indian art tradition. Select a point on the map or from the list.</p>
+  </section>
+
+  <section class="atlas-shell">
+    <aside class="locations">
+      <div class="locations-head"><span>LOCATIONS</span><button id="resetBtn">VIEW INDIA</button></div>
+      <div id="locationList"></div>
+    </aside>
+
+    <div class="map-area">
+      <div class="map-title">INDIA · ART &amp; CULTURAL REGIONS</div>
+      <div class="map-stage">
+        <div class="map-lines"></div>
+        <img id="indiaMap" class="india-map" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/India_outline.svg" alt="Outline map of India">
+        <div id="mapFallback" class="map-fallback" hidden>India map outline could not be loaded.<br><small>The numbered locations are still available in the list.</small></div>
+        <div id="markers"></div>
+        <div class="map-caption">10 cultural locations · click a number to explore</div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main class="page">
-    <section class="intro-card">
-      <div>
-        <span class="section-label">INTERACTIVE ART MAP</span>
-        <h2>Trace Indian art through place</h2>
-        <p>
-          Click any numbered point on the map to discover the artistic tradition, historical context,
-          important features and representative works associated with that location.
-        </p>
-      </div>
-      <div class="instruction">
-        <span class="instruction-number">1–10</span>
-        <span>Click a numbered marker</span>
-      </div>
-    </section>
+  <section id="story" class="story-card">
+    <div class="story-empty"><div class="story-mark">✦</div><div><div class="eyebrow dark">SELECT A PLACE</div><h2>Click a numbered point to begin.</h2><p>Its artwork, artistic tradition and historical context will appear here.</p></div></div>
+  </section>
 
-    <section class="map-layout">
-      <aside class="location-list" aria-label="Art locations">
-        <div class="list-heading">
-          <span>LOCATIONS</span>
-          <button id="resetBtn" type="button">Reset map</button>
-        </div>
-        <div id="locationList"></div>
-      </aside>
+  <section class="timeline-section">
+    <div class="eyebrow dark">A QUICK TIMELINE</div><h2>Art across centuries</h2>
+    <div class="timeline">
+      <div class="time-item"><b>2nd BCE</b><span>Ajanta</span><small>Early Buddhist mural traditions</small></div>
+      <div class="time-item"><b>6th–10th CE</b><span>Ellora</span><small>Rock-cut architecture &amp; sculpture</small></div>
+      <div class="time-item"><b>16th–19th CE</b><span>Mughal Courts</span><small>Miniature manuscript painting</small></div>
+      <div class="time-item"><b>17th–19th CE</b><span>Thanjavur</span><small>Devotional court painting</small></div>
+      <div class="time-item"><b>Living traditions</b><span>Mithila · Warli · Gond</span><small>Folk and community art</small></div>
+    </div>
+  </section>
 
-      <div class="map-wrap">
-        <div id="map" aria-label="Interactive map of Indian art locations"></div>
-        <div class="map-note">Map data © OpenStreetMap contributors</div>
-      </div>
-    </section>
+  <section class="traditions">
+    <div class="traditions-copy"><div class="eyebrow dark">WHY PLACE MATTERS</div><h2>Different regions, distinct visual languages.</h2><p>Materials, local stories, religious traditions, court patronage and community practices all influenced how art developed across the subcontinent.</p></div>
+    <div class="motif-grid"><div>01<br><b>Storytelling</b></div><div>02<br><b>Devotion</b></div><div>03<br><b>Nature</b></div><div>04<br><b>Community</b></div></div>
+  </section>
 
-    <section id="details" class="details-card">
-      <div class="details-placeholder">
-        <div class="placeholder-icon">✦</div>
-        <div>
-          <span class="section-label">SELECT A LOCATION</span>
-          <h2>Choose a numbered point on the map</h2>
-          <p>The information about the selected art tradition will appear here.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="learning-section">
-      <div class="section-label">WHAT THIS MAP SHOWS</div>
-      <div class="learning-grid">
-        <article>
-          <span>01</span>
-          <h3>Geographic diversity</h3>
-          <p>Art traditions developed in different regions, shaped by local communities, materials and cultural settings.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Historical continuity</h3>
-          <p>Ancient murals, court painting, temple art and living folk traditions form connected layers of Indian art history.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Distinct visual languages</h3>
-          <p>Each tradition uses recognizable subjects, techniques, colours, materials and storytelling methods.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="sources">
-      <div>
-        <span class="section-label">REFERENCES</span>
-        <h2>Selected sources</h2>
-      </div>
-      <ul>
-        <li>Google Arts & Culture — Indian art traditions</li>
-        <li>Archaeological Survey of India — heritage sites</li>
-        <li>UNESCO World Heritage Centre — Ajanta, Ellora and related heritage</li>
-        <li>Ministry of Culture / CCRT — Indian visual arts</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <div>Indian Art Atlas · Interactive Art Map · Academic Assignment</div>
-    <div>Created as a static GitHub Pages website</div>
-  </footer>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-          crossorigin=""></script>
-  <script src="script.js"></script>
+  <section class="sources">
+    <div><div class="eyebrow dark">REFERENCES</div><h2>Selected sources</h2></div>
+    <div><p>Archaeological Survey of India · UNESCO World Heritage Centre · Ministry of Culture / CCRT · National Museum · Wikimedia Commons image records.</p><p class="small">Artwork images are served from Wikimedia Commons. Image credits and source pages are shown with each location.</p></div>
+  </section>
+</main>
+<footer><span>Indian Art Atlas · Interactive Art Map</span><span>Academic Assignment</span></footer>
+<script src="script.js"></script>
 </body>
 </html>
