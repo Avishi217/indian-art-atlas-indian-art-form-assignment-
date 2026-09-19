@@ -1,45 +1,21 @@
 # Indian Art Atlas
 
-## Interactive Art Map
-
-This project presents an interactive digital map highlighting important
-locations associated with Indian art history and traditional art forms.
-
-Users can select numbered locations on the map to explore information
-about the artistic traditions, historical background, characteristics,
-and representative themes associated with each region.
+An interactive digital map exploring important locations and traditions in Indian art history.
 
 ## Features
+- 10 numbered locations across India
+- Clickable map markers with location stories
+- Artwork/reference image for every location
+- Historical context, period, characteristics and representative works
+- Visual timeline
+- Responsive museum-style layout
+- No Leaflet or map-tile dependency, so the map renders as one complete India outline
 
-- Interactive map of India
-- Numbered locations from 1 to 10
-- Information displayed when a location is selected
-- Regional art traditions and historical context
-- Responsive design for different screen sizes
-- Interactive location list for easier navigation
+## Technologies
+HTML · CSS · JavaScript · SVG · Wikimedia Commons
 
-## Art Traditions Covered
+## Deployment
+Upload `index.html`, `style.css`, `script.js`, and `README.md` to the existing GitHub repository. If GitHub Pages is already enabled, it will update automatically after the new files are committed.
 
-1. Ajanta – Buddhist mural painting
-2. Ellora – Rock-cut art and sculpture
-3. Mithila – Madhubani painting
-4. Raghurajpur – Pattachitra
-5. Srikalahasti – Kalamkari
-6. Thanjavur – Tanjore painting
-7. Warli Region – Warli painting
-8. Mewar / Udaipur – Rajasthani miniature painting
-9. Gond Region – Gond painting
-10. Delhi – Mughal miniature painting
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- Leaflet.js
-- OpenStreetMap
-
-## Purpose
-
-The project was created as an interactive way to explore the
-geographical spread and diversity of Indian art traditions.
+## Image and map sources
+The artwork images and India outline are served from Wikimedia Commons. The interface identifies the source of each artwork. Wikimedia Commons file pages contain the applicable author and licensing information.
