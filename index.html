@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indian Art Atlas | Interactive Art Map</title>
+  <meta name="description" content="An interactive digital map exploring important locations and traditions in Indian art history." />
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://tile.openstreetmap.org">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIINfQ3D8aVf1F7W5hJmQ3p8rY9K5H3b2s="
+        crossorigin=""/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">INDIAN ART • DIGITAL HUMANITIES</div>
+      <h1>Indian Art Atlas</h1>
+      <p class="subtitle">Explore the geographic spread of India's artistic traditions through key places, movements and artworks.</p>
+      <div class="hero-stats">
+        <span><strong>10</strong> locations</span>
+        <span><strong>8+</strong> art traditions</span>
+        <span><strong>Interactive</strong> map</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="intro-card">
+      <div>
+        <span class="section-label">INTERACTIVE ART MAP</span>
+        <h2>Trace Indian art through place</h2>
+        <p>
+          Click any numbered point on the map to discover the artistic tradition, historical context,
+          important features and representative works associated with that location.
+        </p>
+      </div>
+      <div class="instruction">
+        <span class="instruction-number">1–10</span>
+        <span>Click a numbered marker</span>
+      </div>
+    </section>
+
+    <section class="map-layout">
+      <aside class="location-list" aria-label="Art locations">
+        <div class="list-heading">
+          <span>LOCATIONS</span>
+          <button id="resetBtn" type="button">Reset map</button>
+        </div>
+        <div id="locationList"></div>
+      </aside>
+
+      <div class="map-wrap">
+        <div id="map" aria-label="Interactive map of Indian art locations"></div>
+        <div class="map-note">Map data © OpenStreetMap contributors</div>
+      </div>
+    </section>
+
+    <section id="details" class="details-card">
+      <div class="details-placeholder">
+        <div class="placeholder-icon">✦</div>
+        <div>
+          <span class="section-label">SELECT A LOCATION</span>
+          <h2>Choose a numbered point on the map</h2>
+          <p>The information about the selected art tradition will appear here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="learning-section">
+      <div class="section-label">WHAT THIS MAP SHOWS</div>
+      <div class="learning-grid">
+        <article>
+          <span>01</span>
+          <h3>Geographic diversity</h3>
+          <p>Art traditions developed in different regions, shaped by local communities, materials and cultural settings.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Historical continuity</h3>
+          <p>Ancient murals, court painting, temple art and living folk traditions form connected layers of Indian art history.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Distinct visual languages</h3>
+          <p>Each tradition uses recognizable subjects, techniques, colours, materials and storytelling methods.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="sources">
+      <div>
+        <span class="section-label">REFERENCES</span>
+        <h2>Selected sources</h2>
+      </div>
+      <ul>
+        <li>Google Arts & Culture — Indian art traditions</li>
+        <li>Archaeological Survey of India — heritage sites</li>
+        <li>UNESCO World Heritage Centre — Ajanta, Ellora and related heritage</li>
+        <li>Ministry of Culture / CCRT — Indian visual arts</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div>Indian Art Atlas · Interactive Art Map · Academic Assignment</div>
+    <div>Created as a static GitHub Pages website</div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
