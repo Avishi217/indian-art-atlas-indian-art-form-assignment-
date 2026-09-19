@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Indian Art Atlas</title>
 <meta name="description" content="Interactive digital map exploring important locations in Indian art history.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,10 +34,8 @@
     <div class="map-area">
       <div class="map-title">INDIA · ART &amp; CULTURAL REGIONS</div>
       <div class="map-stage">
-        <div class="map-lines"></div>
-        <img id="indiaMap" class="india-map" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/India_outline.svg" alt="Outline map of India">
-        <div id="mapFallback" class="map-fallback" hidden>India map outline could not be loaded.<br><small>The numbered locations are still available in the list.</small></div>
-        <div id="markers"></div>
+        <div class="india-map-local" aria-label="Illustrated map of India with states and art locations"></div>
+        <div id="markers" aria-label="Art locations on the map"></div>
         <div class="map-caption">10 cultural locations · click a number to explore</div>
       </div>
     </div>

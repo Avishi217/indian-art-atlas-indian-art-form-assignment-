@@ -3,19 +3,19 @@
 An interactive digital map exploring important locations and traditions in Indian art history.
 
 ## Features
-- 10 numbered locations across India
-- Clickable map markers with location stories
-- Artwork/reference image for every location
-- Historical context, period, characteristics and representative works
-- Visual timeline
-- Responsive museum-style layout
-- No Leaflet or map-tile dependency, so the map renders as one complete India outline
+- 10 clickable art locations
+- Illustrated India map with state names
+- Location list with map interaction
+- Local artwork images for every location
+- Historical context, characteristics and representative works
+- Timeline and cultural context sections
+- Responsive GitHub Pages design
 
 ## Technologies
-HTML · CSS · JavaScript · SVG · Wikimedia Commons
+HTML · CSS · JavaScript
 
 ## Deployment
-Upload `index.html`, `style.css`, `script.js`, and `README.md` to the existing GitHub repository. If GitHub Pages is already enabled, it will update automatically after the new files are committed.
+Upload all project files to a public GitHub repository and enable GitHub Pages from **Settings → Pages → Deploy from a branch → main → / (root)**.
 
-## Image and map sources
-The artwork images and India outline are served from Wikimedia Commons. The interface identifies the source of each artwork. Wikimedia Commons file pages contain the applicable author and licensing information.
+## Assets
+The India map and artwork thumbnails are included locally in the repository so the interface does not depend on external map tiles or image URLs.
